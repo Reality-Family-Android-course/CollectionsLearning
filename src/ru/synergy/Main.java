@@ -1,6 +1,8 @@
 package ru.synergy;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class Main {
 
@@ -13,8 +15,18 @@ public class Main {
      cats[2] = new Cat("Филип Маркович");
      cats[3] = new Cat("Котяра");
 
-     cats[1] = null;
+     //cats[1] = null;
 
      System.out.println(Arrays.toString(cats));
+
+     ArrayList<Cat> catsList = new ArrayList();
+     for(Cat cat : cats){
+         catsList.add(cat);
+     }
+
+     catsList.add( new Cat("Бегемот2"));
+
+     System.out.println(catsList.toString());
+
     }
 }
